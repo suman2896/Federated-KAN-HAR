@@ -1,24 +1,28 @@
 # Human Activity Recognition with Federated Learning and KAN
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.6%2B-red)
+![Federated Learning](https://img.shields.io/badge/Federated-Learning-ff69b4)
+![KAN](https://img.shields.io/badge/KAN-%2Bgreen)
 
 This project implements a federated learning system using a Kolmogorov-Arnold Network (KAN) model for human activity recognition using the WISDM dataset.
 
-## Overview
+## 📋 Overview
 
 The system processes accelerometer data from smartphones to classify human activities using a novel KAN-based neural network architecture. The implementation features federated learning, allowing model training across multiple distributed clients while keeping data localized.
 
-## Dataset
+## 🗃️ Dataset
 
 The project uses the WISDM (Wireless Sensor Data Mining) dataset containing accelerometer data from smartphones. The dataset includes six activity classes:
-- Walking
-- Jogging
-- Upstairs
-- Downstairs
-- Sitting
-- Standing  
+- 🚶 Walking
+- 🏃 Jogging
+- ⬆️ Upstairs
+- ⬇️ Downstairs
+- 🪑 Sitting
+- 🧍 Standing  
 
 Dataset link - https://www.cis.fordham.edu/wisdm/dataset.php
 
-## Model Architecture
+## 🧠 Model Architecture
 
 The KANModel consists of:
 - Temporal KAN layer for feature extraction
@@ -26,7 +30,7 @@ The KANModel consists of:
 - Attention mechanism for focusing on important time steps
 - Classifier for final activity prediction
 
-## Federated Learning Setup
+## 🌐 Federated Learning Setup
 
 The implementation includes:
 - Federated client management
@@ -34,7 +38,7 @@ The implementation includes:
 - Federated averaging for model aggregation
 - Client selection with configurable fraction participation
 
-## Key Features
+## ✨ Key Features
 
 1. **Data Preprocessing**: 
    - Sequence creation with sliding windows
@@ -52,7 +56,12 @@ The implementation includes:
    - ROC curve analysis
    - Training/validation performance tracking
 
-## Installation
+## 🛠️ Installation
 
 ```bash
-pip install torch numpy pandas matplotlib seaborn scikit-learn tqdm
+# Clone the repository
+git clone https://github.com/suman2896/Federated-KAN-HAR.git
+cd Federated-KAN-HAR
+
+# Install dependencies
+pip install -r requirements.txt
